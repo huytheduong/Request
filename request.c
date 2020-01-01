@@ -14,7 +14,7 @@ struct request *new = malloc(sizeof(struct request));//create new cus for the us
  scanf("%d",&new->room_number);	//store the input
 
  struct request *temp = NULL;
- for(temp = list;temp!=NULL;temp = temp->next)
+ for(temp = list; temp != NULL;temp = temp->next)
  {
 	 if(new->room_number == temp->room_number)
 	 {
@@ -30,13 +30,13 @@ struct request *new = malloc(sizeof(struct request));//create new cus for the us
  read_line(new->last,NAME_LEN);
  printf("Enter number of items: ");
  scanf("%d",&new->num_items); //collect the neccessary data
- if(list== NULL)
+ if(list == NULL)
  {
 	list = new;
 	new->next = NULL;
 	return list;
  }	//if list empty add node to the first position
- if(list->next==NULL)
+ if(list->next == NULL)
  { 
       //if there 2 elements 
      if(strcmp(new->last,list->last)>0)
